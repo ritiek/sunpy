@@ -1,8 +1,47 @@
+0.8.3 (Unreleased)
+==================
+
+Bug Fixes
+---------
+
+- `~sunpy.net.dataretriever.clients.XRSClient` now reports time ranges of files correctly. [#2364]
+- Make parse_time work with datetime64s and pandas series [#2370]
+- CompositeMap axes scaling now uses map spatial units [#2310]
+- Moved license file to root of repository and updated README file [#2326]
+- Fix docstring formatting for net.vso.attrs [#2309]]
+- Fix coloring of ticks under matplotlib 2.0 default style [#2320]
+- Always index arrays with tuples in `ImageAnimator` [#2320]
+- Added links to possible attrs for FIDO in guide [#2317] [#2289]
+- Updated GitHub Readme [#2281] [#2283]
+- Fix matplotlib / pandas 0.21 bug in examples [#2336]
+- Fixes the off limb enhancement example [#2329]
+- Changes to masking hot pixels and picking bright pixels examples [#2325] [#2319]
+- Travis CI fix for numpy-dev build [#2340]
+- Updated masking brightest pixel example [#2338]
+- Changed TRAVIS cronjobs [#2338]
+- Support array values for `obstime` for coordinates and transformations [#2342] [#2346]
+- Updated Gallery off limb enhance example [#2337]
+- Documentation fixes for VSO [#2354] [#2353]
+- All tests within the documentation have been fixed [#2343]
+- Change to using pytest-remotedata for our online tests [#2345]
+- Fixed upstream astropy/numpy documentation issues [#2359]
+- Documentation for Map improved [#2361]
+- Fix the output units of pixel_to_world [#2362]
+- Documentation for Database improved [#2355]
+- Added test for mapsave [#2365]
+- Documentation for Sun improved [#2369]
+
+0.8.2
+=====
+
+Bug Fixes
+---------
+
+- Shows a warning if observation time is missing [#2293]
+- Updates MapCube to access the correct properties of the namedtuple SpatialPair [#2297]
+
 0.8.1
 ======
-
-New Features
-------------
 
 Bug fixes
 ---------
