@@ -10,15 +10,15 @@ sudo: false
 
 # The apt packages below are needed but can no longer be installed with
 # sudo apt-get.
-addons:
-    apt:
-        packages:
-            - libatlas-dev
-            - liblapack-dev
-            - gfortran
-            - graphviz
-            - texlive-latex-extra
-            - dvipng
+#addons:
+#    apt:
+#        packages:
+#            - libatlas-dev
+#            - liblapack-dev
+#            - gfortran
+#            - graphviz
+#            - texlive-latex-extra
+#            - dvipng
 
 cache:
   directories:
