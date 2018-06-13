@@ -53,7 +53,7 @@ class WaveunitNotFoundError(Exception):
     def __init__(self, obj):
         self.obj = obj
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):  # coveralls: ignore
         return 'the wavelength unit cannot be found in {0}'.format(self.obj) + \
                ' and default_waveunit not specified when opening the database'
 
@@ -67,7 +67,7 @@ class WaveunitNotConvertibleError(Exception):
     def __init__(self, waveunit):
         self.waveunit = waveunit
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):  # coveralls: ignore
         return (
             'the waveunit {0!r} cannot be converted to an '
             'astropy.units.Unit instance'.format(self.waveunit))
@@ -95,7 +95,7 @@ class JSONDump(Base):
     def __str__(self):
         return self.dump
 
-    def __repr__(self):  # pragma: no cover
+    def __repr__(self):  # coveralls: ignore
         return '<{0}(dump {1!r})>'.format(self.__class__.__name__, self.dump)
 
 
@@ -123,7 +123,7 @@ class FitsHeaderEntry(Base):
     def __ne__(self, other):
         return not (self == other)
 
-    def __repr__(self):  # pragma: no cover
+    def __repr__(self):  # coveralls: ignore
         return '<{0}(id {1}, key {2!r}, value {3!r})>'.format(
             self.__class__.__name__, self.id, self.key, self.value)
 
@@ -156,7 +156,7 @@ class FitsKeyComment(Base):
     def __ne__(self, other):
         return not (self == other)
 
-    def __repr__(self):  # pragma: no cover
+    def __repr__(self):  # coveralls: ignore
         return '<{0}(id {1}, key {2!r}, value {3!r})>'.format(
             self.__class__.__name__, self.id, self.key, self.value)
 

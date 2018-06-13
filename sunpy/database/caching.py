@@ -48,7 +48,7 @@ class BaseCache(object):
         attempted to be accessed.
 
         """
-        return  # pragma: no cover
+        return  # coveralls: ignore
 
     @abstractmethod
     def __setitem__(self, key, value):
@@ -102,58 +102,58 @@ class BaseCache(object):
         for key in self._dict.__iter__():
             yield key
 
-    def __reversed__(self):  # pragma: no cover
+    def __reversed__(self):  # coveralls: ignore
         for key in self._dict.__reversed__():
             yield key
 
-    def clear(self):  # pragma: no cover
+    def clear(self):  # coveralls: ignore
         return self._dict.clear()
 
-    def keys(self):  # pragma: no cover
+    def keys(self):  # coveralls: ignore
         return list(self._dict.keys())
 
-    def values(self):  # pragma: no cover
+    def values(self):  # coveralls: ignore
         return list(self._dict.values())
 
-    def items(self):  # pragma: no cover
+    def items(self):  # coveralls: ignore
         return list(self._dict.items())
 
-    def iterkeys(self):  # pragma: no cover
+    def iterkeys(self):  # coveralls: ignore
         return iter(self._dict.keys())
 
-    def itervalues(self):  # pragma: no cover
+    def itervalues(self):  # coveralls: ignore
         for value in self._dict.values():
             yield value
 
-    def iteritems(self):  # pragma: no cover
+    def iteritems(self):  # coveralls: ignore
         for key, value in six.iteritems(self._dict):
             yield key, value
 
-    def update(self, *args, **kwds):  # pragma: no cover
+    def update(self, *args, **kwds):  # coveralls: ignore
         self._dict.update(*args, **kwds)
 
-    def pop(self, key, default=MutableMapping._MutableMapping__marker):  # pragma: no cover
+    def pop(self, key, default=MutableMapping._MutableMapping__marker):  # coveralls: ignore
         return self._dict.pop(key, default)
 
-    def setdefault(self, key, default=None):  # pragma: no cover
+    def setdefault(self, key, default=None):  # coveralls: ignore
         return self._dict.setdefault(key, default)
 
-    def popitem(self, last=True):  # pragma: no cover
+    def popitem(self, last=True):  # coveralls: ignore
         return self._dict.popitem(last)
 
-    def __reduce__(self):  # pragma: no cover
+    def __reduce__(self):  # coveralls: ignore
         return self._dict.__reduce__()
 
-    def copy(self):  # pragma: no cover
+    def copy(self):  # coveralls: ignore
         return self._dict.copy()
 
-    def __eq__(self, other):  # pragma: no cover
+    def __eq__(self, other):  # coveralls: ignore
         return self._dict.__eq__(other)
 
-    def __ne__(self, other):  # pragma: no cover
+    def __ne__(self, other):  # coveralls: ignore
         return self._dict.__ne__(other)
 
-    def viewkeys(self):  # pragma: no cover
+    def viewkeys(self):  # coveralls: ignore
         return self._dict.keys()
 
     def viewvalues(self):  # pragma: no cover

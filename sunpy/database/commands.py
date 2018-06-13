@@ -36,7 +36,7 @@ class NoSuchEntryError(Exception):
     def __init__(self, database_entry):
         self.database_entry = database_entry
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):  # coveralls: ignore
         return (
             'the database entry {0!r} cannot be removed because it '
             'is not stored in the database'.format(self.database_entry))
@@ -51,7 +51,7 @@ class NonRemovableTagError(Exception):
         self.database_entry = tag
         self.tag = tag
 
-    def __str__(self):  # pragma: no cover
+    def __str__(self):  # coveralls: ignore
         errmsg = 'the tag {0} cannot be removed from the database entry {1!r}'
         return errmsg.format(self.database_entry, self.tag)
 
@@ -69,11 +69,11 @@ class DatabaseOperation(object):
 
     @abstractmethod
     def __call__(self):
-        return  # pragma: no cover
+        return  # coveralls: ignore
 
     @abstractmethod
     def undo(self):
-        return  # pragma: no cover
+        return  # coveralls: ignore
 
 
 class CompositeOperation(DatabaseOperation):
