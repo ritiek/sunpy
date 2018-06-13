@@ -29,7 +29,7 @@ class BaseCache(object):
         self.maxsize = maxsize
         self._dict = OrderedDict()
 
-    def get(self, key, default=None):  # pragma: no cover
+    def get(self, key, default=None):  # coveralls: ignore
         """Return the corresponding value to `key` if `key` is in the cache,
         `default` otherwise. This method has no side-effects, multiple calls
         with the same cache and the same passed key must always return the same
